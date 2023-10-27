@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    </div>
+    <div class="name" >
+        <img src="mani.jpg" alt="A" >
+        <center><h1  class="name-h">Manikandan</h1><br>
+        <h3  class="name-j">Student</h3></center>
+    </div>
+    <nav>
+        <ul class="nav-l">
+            <a href="#about"><li class="lis" >About</li></a>
+            <a href="#edu"><li class="lis" >Education</li></a>
+            <a href="#skills"><li class="lis" >Skills</li></a>
+            <a href="#project"><li class="lis" >Project</li></a>
+            <a href="#doc"><li class="lis" >Resume</li></a>
+            <a href="#contact"><li class="lis">Contact</li></a>
+        </ul>
+    </nav>
+    <div class="about" id="about">
+        <h3>About</h3><br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod qui commodi, odio, nulla sit, et rerum eveniet accusantium ducimus molestias deleniti laudantium dolor minima pariatur fugit aut recusandae accusamus officiis. Fugiat ad praesentium voluptates mollitia perferendis laborum harum numquam officiis, fuga perspiciatis eligendi similique voluptas quibusdam, tempora officia ipsum nam.</p>
+    </div>
+    <div class="edu" id="edu">
+        <h3>Education</h3><br><br>
+        <center><p><li>B.Sc Computer Science</li></p></center>
+    </div>
+    <div class="skill" id="skills">
+        <h3>Skills</h3><br>
+        <ul class="skill-ul">
+            <li class="skill-li">HTML</li>
+            <li class="skill-li">CSS</li>
+            <li class="skill-li">JS</li>
+        </ul>
+    </div>
+    <div class="project" id="project">
+        <h3>Projects</h3><br>
+        <ul>
+            <li class="pro-li"><a href="">Project-1</a></li>
+            <li class="pro-li"><a href="">Project-2</a></li>
+        </ul>
+    </div>
+    <div class="doc" id="doc">
+        <h3>Document</h3>
+       <center> <h2 class="doc-center"  >Resume CV</h2>
+        <a href=""><button type="button" ref="youtube.com" >Click Here</button></a>
+    </center>
+    </div>
+    <div class="contact" id="contact">
+        <h3>Contact Us</h3><br>
+        <label for="">Email : </label>
+        <label for="">Phone : </label>
+        <label for="">Insta : </label>
+        <label for="">D.cart: </label>
+    </div>
+    <div class="copyright">
+        <p>&copy; Copyright Manikandan</p>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e){
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    })
+                }
+            });
+        });
+    </script>
+   
+</body>
+</html>
